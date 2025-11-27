@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda - Tech Store</title>
+
+    <!-- CSS exclusivo da página Ajuda -->
+    <link rel="stylesheet" href="css/ajuda.css">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS GLOBAL DO HEADER -->
+    <link rel="stylesheet" href="css/header.css" />
+    <!-- CSS GLOBAL DO FOOTER -->
+    <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body class="ajuda-page">
+
+    <!-- SIDEBAR -->
+    <nav class="side-menu" id="sideMenu">
+        <div class="menu-header">
+            <img src="imagens/logo.png" alt="Tech Store" class="side-logo">
+        </div>
+
+        <ul>
+            <li><a href="index.html"><span>🏠</span> Início</a></li>
+            <li><a href="cupons.html"><span>🎟️</span> Cupons</a></li>
+            <li><a href="#"><span>❤️</span> Favoritos</a></li>
+            <li><a href="ajuda.html"><span>❓</span> Ajuda</a></li>
+            <li><a href="sobreNos.html"><span>👥</span> Sobre nós</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER GLOBAL -->
+    <header class="top-bar">
+      <div class="container-fluid d-flex align-items-center justify-content-between px-4">
+        
+        <!-- LOGO -->
+        <div class="header-logo d-flex align-items-center">
+          <a href="index.html"><img src="imagens/logo.png" alt="Tech Store"></a>
+        </div>
+
+        <!-- BUSCA -->
+        <div class="flex-grow-1 d-none d-md-flex justify-content-center px-4">
+          <input id="search-input" type="text" class="form-control rounded-pill"
+            placeholder="Pesquise na nossa loja" style="max-width: 600px" />
+          <div id="search-suggestions" class="search-suggestions hidden"></div>
+        </div>
+
+        <!-- ÍCONES -->
+        <div class="d-flex align-items-center gap-3">
+
+          <!-- CARRINHO -->
+          <div class="dropdown">
+            <button class="btn btn-link text-white fs-4" data-bs-toggle="dropdown">
+              <img src="imagens/Icons/carrinho.webp" width="40" height="40" />
+            </button>
+            <ul class="dropdown-menu p-3" style="width: 260px" id="cartDropdown">
+              <li id="cartItemsContainer" class="cart-items">
+                <p class="text-center text-muted">Carrinho vazio</p>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="d-flex justify-content-between fw-bold">
+                <span id="cartQuantity">Itens: 0</span>
+                <span id="cartTotal">Total: R$ 0,00</span>
+              </li>
+              <li class="mt-2">
+                <a href="carrinho.html" class="btn btn-dark w-100">Ir para o carrinho</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- PERFIL -->
+          <div class="dropdown">
+            <button class="btn btn-link text-white fs-4" data-bs-toggle="dropdown">
+              <img src="imagens/Icons/icon.png" width="40" height="40" />
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="minhaConta.html">Minha Conta</a></li>
+              <li><a class="dropdown-item" href="pedidos.html">Meus Pedidos</a></li>
+              <li><a class="dropdown-item" href="favoritos.html">Favoritos</a></li>
+            </ul>
+          </div>
+
+          <!-- MENU -->
+          <button class="btn btn-link text-white fs-3 menu-icon">☰</button>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTEÚDO DA PÁGINA AJUDA -->
+    <main class="ajuda-main-content">
+
+        <button class="ajuda-voltar-btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M5 12L12 5M5 12L12 19" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <h1 class="ajuda-title">Ajuda</h1>
+
+        <form>
+            <div class="ajuda-form-group">
+                <select class="ajuda-dropdown" id="motivoSelect">
+                    <option value="">Selecione o motivo do contato</option>
+                    <option value="erro">Reportar erro encontrado</option>
+                    <option value="bug">Descrever bug encontrado</option>
+                    <option value="sugestao">Sugestão e melhoria</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="ajuda-form-group">
+                <textarea class="ajuda-textarea" placeholder="Escreva aqui..."></textarea>
+            </div>
+        </form>
+
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Tech Store</h3>
+            <p>© 2025 - Todos os direitos reservados</p>
+
+            <div class="footer-links">
+              <span id="telefone" class="icon telefone-icon" title="Copiar telefone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79a15.466 15.466 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.2 2.2z" />
+                </svg>
+              </span>
+
+              <a href="https://github.com/bbruno8/trabalho_final_frontend" target="_blank" rel="noopener noreferrer"
+                class="icon github-icon" title="GitHub">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                  <path d="M12 0.297C5.371 0.297 0 5.667 0 12.297c0 5.291 3.438 9.784 8.205 11.364.6.111.82-.261.82-.579 0-.285-.11-1.041-.017-2.044-3.338.726-4.042-1.61-4.042-1.61-.546-1.388-1.333-1.758-1.333-1.758-1.09-.745.082-.73.082-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.809 1.304 3.495.997.108-.775.419-1.304.762-1.604-2.665-.306-5.467-1.332-5.467-5.93 0-1.31.467-2.381 1.235-3.222-.124-.303-.535-1.526.117-3.176 0 0 1.008-.322 3.301 1.23.958-.266 1.984-.399 3.003-.404 1.019.005 2.045.138 3.003.404 2.291-1.552 3.298-1.23 3.298-1.23.653 1.65.242 2.873.118 3.176.77.841 1.234 1.912 1.234 3.222 0 4.609-2.805 5.62-5.478 5.921.43.369.814 1.096.814 2.21 0 1.596-.015 2.882-.015 3.274 0 .32.218.694.825.577C20.565 22.078 24 17.588 24 12.297c0-6.63-5.371-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+
+            <span id="copiado-msg" class="copiado-msg">Número copiado!</span>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/ajuda.js"></script>
+
+</body>
+</html>

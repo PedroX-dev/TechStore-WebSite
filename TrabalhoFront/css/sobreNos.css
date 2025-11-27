@@ -1,0 +1,272 @@
+/* =============================================================
+   RESET LOCAL (NÃO INTERFERE NO HEADER GLOBAL)
+============================================================= */
+.sobre-page main * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =============================================================
+   BODY ESPECÍFICO DA PÁGINA SOBRE NÓS
+============================================================= */
+.sobre-page body,
+body.sobre-page {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(180deg, #11212D 0%, #11212D 40%, #3e6079 100%);
+    min-height: 100vh;
+}
+
+/* =============================================================
+   CONTEÚDO PRINCIPAL
+============================================================= */
+.sobre-page .main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+.sobre-page .back-button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 35px;
+    padding: 8px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+
+.sobre-page .back-button:hover {
+    opacity: 0.7;
+}
+
+.sobre-page .back-button svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* =============================================================
+   SEÇÃO - NOSSA MISSÃO
+============================================================= */
+.sobre-page .mission-section {
+    display: flex;
+    gap: 35px;
+    align-items: flex-start;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+
+.sobre-page .mission-image {
+    flex: 0 0 280px;
+    min-width: 280px;
+}
+
+.sobre-page .mission-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.sobre-page .mission-text {
+    flex: 1;
+    min-width: 300px;
+    background-color: #bfc5cc;
+    padding: 30px 35px;
+    border-radius: 10px;
+}
+
+.sobre-page .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    text-decoration: underline;
+    text-decoration-thickness: 2.5px;
+    text-underline-offset: 6px;
+}
+
+.sobre-page .section-description {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #3f3f3f;
+    font-weight: 500;
+}
+
+/* =============================================================
+   SEÇÃO - NOSSA HISTÓRIA
+============================================================= */
+.sobre-page .history-section {
+    display: flex;
+    gap: 35px;
+    align-items: flex-start;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+
+.sobre-page .history-text {
+    flex: 1;
+    min-width: 300px;
+    background-color: #bfc5cc;
+    padding: 30px 35px;
+    border-radius: 10px;
+}
+
+.sobre-page .section-title-white {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    text-decoration: underline;
+    text-decoration-thickness: 2.5px;
+    text-underline-offset: 6px;
+}
+
+.sobre-page .section-description-white {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #3f3f3f;
+    font-weight: 500;
+}
+
+.sobre-page .history-image {
+    flex: 0 0 280px;
+    min-width: 280px;
+}
+
+.sobre-page .history-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* =============================================================
+   SEÇÃO - Junte-se a nós
+============================================================= */
+.sobre-page .join-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.sobre-page .join-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* =============================================================
+   RESPONSIVIDADE
+============================================================= */
+@media (max-width: 768px) {
+    .sobre-page .mission-section,
+    .sobre-page .history-section {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .sobre-page .mission-image img,
+    .sobre-page .history-image img {
+        height: 200px;
+    }
+
+    .sobre-page .section-title,
+    .sobre-page .section-title-white {
+        font-size: 24px;
+    }
+
+    .sobre-page .join-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-page .section-description,
+    .sobre-page .section-description-white {
+        font-size: 14px;
+    }
+}
+
+/* =============================================================
+   FOOTER (ESPECÍFICO DA PÁGINA, NÃO AFETA OUTRAS)
+============================================================= */
+.sobre-page .footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(13, 26, 37, 0.75);
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #E5E5E5;
+}
+
+.sobre-page .footer-content {
+  text-align: center;
+}
+
+.sobre-page .footer-content h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4AC0FF;
+}
+
+.sobre-page .footer-content p {
+  margin: 2px 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.sobre-page .footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.sobre-page .icon {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.sobre-page .icon:hover {
+  transform: scale(1.1);
+}
+
+.sobre-page .github-icon svg,
+.sobre-page .telefone-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.sobre-page .copiado-msg {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+  color: #4AC0FF;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .sobre-page .footer {
+    padding: 10px 15px;
+  }
+  .sobre-page .footer-links {
+    gap: 12px;
+  }
+}

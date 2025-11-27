@@ -1,0 +1,118 @@
+/* ===== CONTAINER PRINCIPAL ===== */
+.cart-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Título */
+.cart-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+/* Painel branco transparente */
+.cart-panel {
+    background: rgba(255,255,255,0.18);
+    border-radius: 14px;
+    padding: 20px 26px;
+    backdrop-filter: blur(12px);
+    color: #fff;
+}
+
+/* Seções */
+.cart-section {
+    margin-top: 20px;
+}
+
+/* Botão da seção */
+.section-toggle {
+    width: 100%;
+    background: rgba(0,0,0,0.25);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.section-content {
+    padding: 15px;
+    background: rgba(255,255,255,0.18);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Itens */
+.cart-item-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.cart-item-row img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.cart-item-name {
+    font-size: 18px;
+}
+
+.cart-item-price {
+    margin-left: auto;
+    font-size: 18px;
+}
+
+.btn-remove {
+    margin-left: 20px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: #d52e2e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Cupom */
+.cart-coupon {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#cupomInput {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+}
+
+#btnCupom {
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: #0a1c28;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Resumo */
+.cart-summary-final {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.summary-total {
+    font-size: 22px;
+    margin-top: 10px;
+}

@@ -1,0 +1,212 @@
+/* HEADER / TOPO */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto !important;
+}
+
+.top-bar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  height: 80px;
+  padding: 0;
+}
+
+/* Container interno (se você usar .top-bar-inner em alguma página) */
+.top-bar-inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 80px;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo */
+.header-logo {
+  position: relative;
+  height: 80px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  position: absolute;
+  height: 200px;
+  width: auto;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  object-fit: contain;
+}
+
+/* Dropdowns (carrinho e perfil) */
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block !important;
+  margin-top: 8px;
+}
+
+.dropdown-menu {
+  border-radius: 12px !important;
+  padding: 15px !important;
+  background: white;
+  border: none !important;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.3);
+  min-width: 230px;
+  right: 0 !important;
+  left: auto !important;
+}
+
+.dropdown-menu.show {
+  transform: translateX(-20%) !important;
+}
+
+/* Carrinho dentro do dropdown */
+.cart-items {
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+/* Botão de link sem sublinhado (ícones do header) */
+.btn-link {
+  text-decoration: none !important;
+}
+
+.btn-link:hover {
+  text-decoration: none !important;
+}
+
+/* Busca com autocomplete */
+.search-suggestions {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  max-width: 90%;
+  background: white;
+  color: black;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.25);
+  z-index: 2000;
+  overflow: hidden;
+  padding: 8px 0;
+}
+
+.search-suggestions.hidden {
+  display: none;
+}
+
+.suggestion-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.15s;
+}
+
+.suggestion-item:hover {
+  background: #f1f1f1;
+}
+
+.suggestion-thumb {
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.suggestion-name {
+  font-weight: 600;
+}
+
+.suggestion-price {
+  margin-left: auto;
+  color: #0a1c28;
+  font-weight: 700;
+}
+
+/* ----------------------------------------------------
+   MENU HAMBÚRGUER – LATERAL DIREITA
+---------------------------------------------------- */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(180deg, #11212d 0%, #386c93 100%);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  transition: right 0.35s ease;
+  z-index: 3000;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.side-menu .menu-header {
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.side-menu ul {
+  list-style: none;
+}
+
+.side-menu ul li {
+  margin: 12px 0;
+}
+
+.side-menu ul li a {
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.side-menu .logout-area {
+  position: absolute;
+  bottom: 20px;
+}
+
+.side-menu .logout-area a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Logo dentro do menu hamburguer */
+.side-menu .side-logo {
+  width: 160px; /* tamanho moderado */
+  height: auto;
+  display: block;
+  margin: 0 auto 25px; /* centraliza e adiciona espaçamento */
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.4));
+}

@@ -1,0 +1,315 @@
+:root {
+    --primary-dark: #06141B; 
+    --secondary-dark: #11212D;
+    --card-background: #253745;
+    --text-light: #CCD0CF;
+    --text-lighter: #9BA8AB; 
+    --accent-color: white;
+
+    --gradient-top: #101923; 
+    --gradient-bottom: #040d14; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================================================
+   BODY — corrigido (removido min-width errado)
+============================================================ */
+body {
+    background: linear-gradient(180deg, #06141B 0%, #345678 100%);
+    min-height: 100vh;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================================
+   >>> IMPORTANTE: HEADER GLOBAL NÃO É ALTERADO MAIS
+   (Removido o header {} que quebrava tudo)
+============================================================ */
+
+/* ============================================================
+   CONTEÚDO DA PÁGINA DE CUPONS
+============================================================ */
+
+.pagina-cupons {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.pagina-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.pagina-header h1 {
+    font-size: 1.8em;
+    font-weight: normal;
+    margin-left: 15px;
+}
+
+.pagina-header a {
+    text-decoration: none;
+}
+
+.pagina-header .icone-seta-esquerda {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
+
+.adicionar-cupom {
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-background);
+    border-radius: 30px;
+    padding: 12px 20px;
+}
+
+.input-group .icone-tag-input {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    opacity: 0.8;
+}
+
+.adicionar-cupom input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    color: var(--text-light);
+    font-size: 1em;
+    outline: none;
+    padding: 0;
+}
+
+.adicionar-cupom input::placeholder {
+    color: var(--text-lighter);
+}
+
+.lista-cupons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-cupom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondary-dark);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid var(--accent-color);
+    transition: background-color 0.2s;
+}
+
+.card-cupom:hover {
+    background-color: #1a2a3a;
+}
+
+.icone-cupom {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.icone-cupom .icone-bilhete-card {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.detalhes-cupom {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.codigo-cupom-texto {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.cupom-limite {
+    font-size: 0.9em;
+    color: var(--text-lighter);
+}
+
+.cupom-validade {
+    font-size: 0.9em;
+    color: var(--text-lighter);
+    text-align: right;
+    min-width: 100px;
+}
+
+/* ============================================================
+   MODAL
+============================================================ */
+
+#modal-message {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.modal-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.modal-content {
+    background-color: var(--secondary-dark);
+    color: var(--text-light);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-top: 5px solid white;
+
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-visible .modal-content {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+#modal-text {
+    margin-bottom: 25px;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.modal-button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: var(--secondary-dark);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.modal-button:hover {
+    background-color: var(--text-lighter);
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(13, 26, 37, 0.75);
+    padding: 12px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: #E5E5E5;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #4AC0FF;
+}
+
+.footer-content p {
+    margin: 2px 0;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 6px;
+}
+
+.icon {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.github-icon svg, .telefone-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.copiado-msg {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+    color: #4AC0FF;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 10px 15px;
+        margin-top: auto;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+}

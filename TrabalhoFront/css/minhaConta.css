@@ -1,0 +1,352 @@
+body {
+    background: linear-gradient(180deg, #06141B 0%, #345678 100%);
+    min-height: 100vh;
+    color: #CCD0CF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 20px;
+    border-bottom: none;
+}
+
+.navbar-logo {
+    display: flex;
+    gap: 0;
+    border: 1px solid #4A5C6A;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.logo-btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 0;
+}
+
+.logo-btn.tech {
+    background-color: #CCD0CF;
+    color: #06141B;
+}
+
+.logo-btn.store {
+    background-color: #253745;
+    color: #CCD0CF;
+}
+
+.navbar-busca {
+    display: flex;
+    align-items: center;
+    background-color: #CCD0CF;
+    border-radius: 25px;
+    padding: 10px 20px;
+    flex: 1;
+    margin: 0 25px;
+    max-width: 700px;
+}
+.navbar-busca .material-icons {
+    color: #06141B;
+    font-size: 1.2em;
+}
+.navbar-busca input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #06141B;
+    font-size: 1.1em;
+    margin-left: 10px;
+    width: 100%;
+}
+.navbar-busca input::placeholder {
+    color: #253745;
+    font-size: 1em;
+}
+
+.navbar-icones { display: flex; gap: 15px; }
+.navbar-icones .material-icons {
+    color: #CCD0CF;
+    text-decoration: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.pagina-minha-conta {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 40px;
+}
+
+.sidebar-perfil {
+    flex: 1;
+    text-align: center;
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
+}
+.sidebar-perfil img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #CCD0CF;
+}
+.sidebar-perfil h3 {
+    font-size: 2.2em;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0;
+    color: #CCD0CF;
+}
+.sidebar-perfil p {
+    font-size: 1em;
+    color: #9BA8AB;
+    margin-top: 5px;
+}
+
+.conteudo-principal {
+    flex: 2;
+    width: 100%;
+}
+.header-minha-conta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+    color: #CCD0CF;
+}
+.header-minha-conta h2 { margin: 0; font-size: 1.8em; }
+.seta-voltar {
+    position: absolute;
+    left: 0;
+    font-size: 2.5em;
+    color: #CCD0CF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+}
+.accordion-header {
+    background-color: #CCD0CF;
+    color: #06141B;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion-header::after { content: '▾'; font-size: 1.5em; }
+
+.accordion-content {
+    background-color: #CCD0CF;
+    color: #06141B;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    margin-top: -5px;
+    display: none;
+}
+.accordion-item.active .accordion-content { display: block; }
+.accordion-item.active .accordion-header::after { content: '▴'; }
+
+.campo-senha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.campo-senha p { margin: 0; }
+.campo-senha .material-icons {
+    cursor: pointer;
+    color: #253745;
+}
+
+.favoritos-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.card-produto {
+    background-color: #CCD0CF;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 160px;
+    max-width: 160px;
+    text-align: center;
+    border: 1px solid #9BA8AB;
+}
+.card-produto img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.card-categoria {
+    background-color: #06141B;
+    color: #CCD0CF;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.card-produto h4 {
+    font-size: 0.9em;
+    color: #06141B;
+    margin: 10px 0;
+    height: 30px;
+}
+.card-preco { font-size: 0.8em; margin-bottom: 10px; }
+.preco-antigo {
+    color: #4A5C6A;
+    text-decoration: line-through;
+    margin-right: 5px;
+}
+.preco-novo {
+    color: #375534;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.card-botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+.card-botoes button {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+}
+.btn-detalhes {
+    background-color: #9BA8AB;
+    color: #06141B;
+}
+.btn-comprar {
+    background-color: #375534;
+    color: #CCD0CF;
+}
+.card-pedido .card-botoes button {
+    font-size: 0.75em;
+    padding: 6px 3px;
+    white-space: normal;
+    line-height: 1.2;
+    min-height: 40px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+.payment-method p { margin: 0; flex: 1; }
+.payment-method .material-icons {
+    color: #06141B;
+    font-size: 2em;
+}
+.payment-method .icon-olho {
+    font-size: 1.5em;
+    color: #4A5C6A;
+    cursor: pointer;
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(13, 26, 37, 0.75);
+    padding: 12px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: #E5E5E5;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #4AC0FF;
+}
+
+.footer-content p {
+    margin: 2px 0;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 6px;
+}
+
+.icon {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.github-icon svg, .telefone-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.copiado-msg {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+    color: #4AC0FF;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 10px 15px;
+        margin-top: auto;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+}

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tech Store - Serviços TI</title>
+    <link rel="icon" href="Imagens/Icons/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- MENU HAMBÚRGUER LATERAL -->
+    <nav class="side-menu" id="sideMenu">
+      <div class="menu-header">
+          <img src="imagens/logo.png" alt="Tech Store" class="side-logo">
+      </div>
+
+      <ul>
+        <li>
+          <a href="#"><span>🏠</span> Início</a>
+        </li>
+        <li>
+          <a href="cupons.html"><span>🎟️</span> Cupons</a>
+        </li>
+        <li>
+          <a href="#"><span>❤️</span> Favoritos</a>
+        </li>
+        <li>
+          <a href="ajuda.html"><span>❓</span> Ajuda</a>
+        </li>
+        <li>
+          <a href="sobreNos.html"><span>👥</span> Sobre nós</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="top-bar">
+      <div class="container-fluid d-flex align-items-center justify-content-between px-4">
+
+        <!-- LOGO -->
+        <div class="header-logo d-flex align-items-center">
+          <a href="index.html">
+            <img src="imagens/logo.png" alt="Tech Store">
+          </a>
+        </div>
+
+        <!-- BUSCA -->
+        <div class="flex-grow-1 d-none d-md-flex justify-content-center px-4">
+          <input id="search-input" 
+                type="text" 
+                class="form-control rounded-pill"
+                placeholder="Pesquise na nossa loja"
+                style="max-width: 600px;">
+          <div id="search-suggestions" class="search-suggestions hidden"></div>
+
+        </div>
+
+        <!-- ÍCONES -->
+        <div class="d-flex align-items-center gap-3">
+
+          <!-- CARRINHO -->
+          <div class="dropdown">
+            <button class="btn btn-link text-white fs-4" data-bs-toggle="dropdown">
+              <a href="carrinho.html">
+                <img src="imagens/Icons/carrinho.webp" style="width: 40px; height: 40px;" alt="Avatar" class="avatar-icon">
+              </a>
+            </button>
+
+            <ul class="dropdown-menu p-3" style="width: 260px;" id="cartDropdown">
+              <li id="cartItemsContainer" class="cart-items">
+                <p class="text-center text-muted">Carrinho vazio</p>
+              </li>
+
+              <li><hr class="dropdown-divider"></li>
+
+              <li class="d-flex justify-content-between fw-bold">
+                <span id="cartQuantity">Itens: 0</span>
+                <span id="cartTotal">Total: R$ 0,00</span>
+              </li>
+
+              <li class="mt-2">
+                <a href="carrinho.html" class="btn btn-dark w-100">Ir para o carrinho</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- PERFIL -->
+          <div class="dropdown">
+            <button class="btn btn-link text-white fs-4" data-bs-toggle="dropdown">
+              <img src="imagens/Icons/icon.png" style="width: 40px; height: 40px;" alt="Avatar" class="avatar-icon">
+            </button>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="minhaConta.html">Minha Conta</a></li>
+              <li><a class="dropdown-item" href="pedidos.html">Meus Pedidos</a></li>
+              <li><a class="dropdown-item" href="favoritos.html">Favoritos</a></li>
+            </ul>
+          </div>
+
+          <!-- BOTÃO MENU -->
+          <button class="btn btn-link text-white fs-3 menu-icon">☰</button>
+
+        </div>
+      </div>
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="page-wrapper">
+      <main class="main-content">
+        <!-- CARROSSEL DE BANNERS (APENAS IMAGENS) -->
+        <section class="hero-banner">
+          <div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
+            
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner rounded-4">
+
+              <div class="carousel-item active">
+                <img src="imagens/Banners/Banner1.png" class="d-block w-100" style="height:350px; object-fit:cover;">
+              </div>
+
+              <div class="carousel-item">
+                <img src="imagens/Banners/Banner2.png" class="d-block w-100" style="height:350px; object-fit:cover;">
+              </div>
+
+              <div class="carousel-item">
+                <img src="imagens/Banners/Banner3.png" class="d-block w-100" style="height:350px; object-fit:cover;">
+              </div>
+
+            </div>
+
+            <!-- Botões -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+
+          </div>
+        </section>
+
+
+        <!-- SERVIÇOS TI -->
+        <section class="section-block">
+          <h2>Serviços TI</h2>
+
+          <!-- BLOCO PRINCIPAL -->
+          <div class="services-panel">
+            <!-- LISTA HORIZONTAL DE CARDS -->
+            <div class="cards-grid">
+              <!-- Limpeza -->
+              <article
+                class="service-card"
+                data-name="Limpeza"
+                data-price="79.90"
+                data-old-price="129.90"
+                data-image="caminho.jpg"
+              >
+                <div class="card-badges">
+                  <span class="badge badge-highlight">DESTAQUE</span>
+                  <span class="badge badge-discount">-40%</span>
+                </div>
+
+                <div class="card-image">
+                  <img src="imagens/ServicosTI/limpeza.png" alt="Limpeza">
+                </div>
+
+
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>Limpeza</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+
+                  <p class="card-description">
+                    Limpeza e manutenção preventiva de equipamentos.
+                  </p>
+
+                  <!-- PREÇOS -->
+                  <div class="card-prices">
+                    <span class="old-price">R$ 129,90</span>
+                    <span class="current-price">R$ 79,90</span>
+                  </div>
+
+                  <!-- AÇÕES -->
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+
+              <!-- Manutenção -->
+              <article
+                class="service-card"
+                data-name="Manutenção"
+                data-price="199.90"
+                data-old-price="249.90"
+                data-image="caminho.jpg"
+              >
+                <div class="card-badges">
+                  <span class="badge badge-highlight">DESTAQUE</span>
+                  <span class="badge badge-discount">-20%</span>
+                </div>
+
+                <div class="card-image">
+                  <img src="imagens/ServicosTI/manutencao.jpg" alt="Manutenção">
+                </div>
+
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>Manutenção</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+
+                  <p class="card-description">
+                    Correção de falhas, troca de peças e otimização de sistemas.
+                  </p>
+
+                  <div class="card-prices">
+                    <span class="old-price">R$ 249,90</span>
+                    <span class="current-price">R$ 199,90</span>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+
+              <!-- Sistemas -->
+              <article
+                class="service-card"
+                data-name="Sistemas"
+                data-price="299.90"
+                data-old-price="349.90"
+                data-image="caminho.jpg"
+              >
+                <div class="card-badges">
+                  <span class="badge badge-discount">-15%</span>
+                </div>
+                <div class="card-image">
+                  <img src="imagens/ServicosTI/sistemas.jpg" alt="Sistemas">
+                </div>
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>Sistemas</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+                  <p class="card-description">
+                    Instalação e configuração de sistemas corporativos.
+                  </p>
+                  <div class="card-prices">
+                    <span class="old-price">R$ 349,90</span>
+                    <span class="current-price">R$ 299,90</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+
+              <!-- Redes -->
+              <article
+                class="service-card"
+                data-name="Redes"
+                data-price="249.90"
+                data-old-price="299.90"
+                data-image="caminho.jpg"
+              >
+                <div class="card-badges"></div>
+                <div class="card-image">
+                  <img src="imagens/ServicosTI/redes.jpg" alt="Redes">
+                </div>
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>Redes</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+                  <p class="card-description">
+                    Rede cabeada e Wi-Fi para residências e empresas.
+                  </p>
+                  <div class="card-prices">
+                    <span class="old-price">R$ 299,90</span>
+                    <span class="current-price">R$ 249,90</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+
+              <!-- Suporte Técnico -->
+               <article
+                class="service-card"
+                data-name="Suporte"
+                data-price="0"
+                data-old-price="0"
+                data-image="caminho.jpg"
+              >
+                <div class="card-badges"></div>
+                <div class="card-image">
+                  <img src="imagens/ServicosTI/suporte.jpg" alt="Suporte">
+                </div>
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>Suporte Técnico</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+                  <p class="card-description">
+                    Serviço de assistência para resolver problemas com produtos e serviços tecnológicos, como computadores e softwares.
+                  </p>
+                  <div class="card-prices">
+                    <span class="current-price">Entre em contato para uma avaliação R$ XXX</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+
+            </div>
+            <!-- .cards-grid -->
+          </div>
+          <!-- .services-panel -->
+        </section>
+
+        <!-- SERVIÇOS PROGRAMAÇÃO -->
+        <section class="section-block">
+          <h2>Serviços Programação</h2>
+
+          <div class="services-panel">
+            <div class="cards-grid">
+
+              <!-- Criação de Sites-->
+               <article
+                class="service-card"
+                data-name="Sites"
+                data-price="0"
+                data-old-price="0"
+                data-image="caminho.jpg"
+              >
+                <div class="card-badges">
+                  <span class="badge badge-discount">-17%</span>
+                </div>
+                <div class="card-image">
+                  <img src="imagens/ServicosProgramacao/site.jpg" alt="Sites">
+                </div>
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>Criação de Sites</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+                  <p class="card-description">
+                    Criação de Sites personalizados 100% pelo cliente.
+                  </p>
+                  <div class="card-prices">
+                    <span class="current-price">Entre em contato para uma avaliação R$ XXX</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+              
+              <!-- Criação Apps-->
+               <article
+                class="service-card"
+                data-name="Apps"
+                data-price="0"
+                data-old-price="0"
+                data-image="caminho.jpg"
+              >
+                <div class="card-badges">
+                  <span class="badge badge-discount">-5%</span>
+                </div>
+                <div class="card-image">
+                  <img src="imagens/ServicosProgramacao/apps.jpg" alt="Apps">
+                </div>
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>Criação de Apps</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+                  <p class="card-description">
+                    Criação de Apps personalizados 100% pelo cliente.
+                  </p>
+                  <div class="card-prices">
+                    <span class="current-price">Entre em contato para uma avaliação R$ XXX</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+              
+              <!-- Automação-->
+               <article
+                class="service-card"
+                data-name="Automação"
+                data-price="0"
+                data-old-price="0"
+                data-image="caminho.jpg"
+              >
+                <div class="card-image">
+                  <img src="imagens/ServicosProgramacao/automacao.jpg" alt="Automação">
+                </div>
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>Automação</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+                  <p class="card-description">
+                    Automação de processos especificos, à escolha do cliente.
+                  </p>
+                  <div class="card-prices">
+                    <span class="current-price">Entre em contato para uma avaliação R$ XXX</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+              
+              <!-- Ciber Segurança-->
+               <article
+                class="service-card"
+                data-name="Segurança"
+                data-price="0"
+                data-old-price="0"
+                data-image="caminho.jpg"
+              >
+                <div class="card-badges">
+                  <span class="badge badge-discount">-20%</span>
+                </div>
+                <div class="card-image">
+                  <img src="imagens/ServicosProgramacao/Ciberseguranca.png" alt="Ciber Segurança">
+                </div>
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>Ciber Segurança</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+                  <p class="card-description">
+                    Conjunto de práticas, tecnologias e processos para proteger sistemas, redes e dados digitais contra ataques cibernéticos
+                  </p>
+                  <div class="card-prices">
+                    <span class="current-price">Entre em contato para uma avaliação R$ XXX</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+              
+              <!-- Otimização-->
+               <article
+                class="service-card"
+                data-name="otimização"
+                data-price="0"
+                data-old-price="0"
+                data-image="caminho.jpg"
+              >
+                <div class="card-badges">
+                  <span class="badge badge-discount">-20%</span>
+                </div>
+                <div class="card-image">
+                  <img src="imagens/ServicosProgramacao/Otimizacao.jpeg" alt="Otimização">
+                </div>
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>Otimização</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+                  <p class="card-description">
+                    Processo de ajustar e aprimorar um sistema para que ele opere com máxima eficiência e eficácia, minimizando o uso de recursos e maximizando os resultados.
+                  </p>
+                  <div class="card-prices">
+                    <span class="current-price">Entre em contato para uma avaliação R$ XXX</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+
+              <!-- API Rest-->
+              <article
+                class="service-card"
+                data-name="API REST"
+                data-price="0"
+                data-old-price="0"
+                data-image="caminho.jpg"
+              >
+                <div class="card-badges">
+                  <span class="badge badge-discount">-17%</span>
+                </div>
+                <div class="card-image">
+                  <img src="imagens/ServicosProgramacao/API.jpg" alt="API">
+                </div>
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>API REST</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+                  <p class="card-description">
+                    Criação de APIs escaláveis para integração de sistemas .
+                  </p>
+                  <div class="card-prices">
+                    <span class="current-price">Entre em contato para uma avaliação R$ XXX</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+
+              <!-- Integrações-->
+              <article
+                class="service-card"
+                data-name="Integrações"
+                data-price="0"
+                data-old-price="0"
+                data-image="caminho.jpg"
+              >
+                <div class="card-badges"></div>
+                <div class="card-image">
+                    <img src="imagens/ServicosProgramacao/Integracao.jpg" alt="Integração">
+                </div>
+                <div class="card-body">
+                  <header class="card-header">
+                    <h3>Integrações</h3>
+                    <button class="icon-heart" aria-label="Favoritar">♥</button>
+                  </header>
+                  <p class="card-description">
+                    Integração com gateways de pagamento, ERPs e CRMs.
+                  </p>
+                  <div class="card-prices">
+                    <span class="current-price">Entre em contato para uma avaliação R$ XXX</span>
+                  </div>
+                  <div class="card-footer">
+                    <div class="top-buttons">
+                        <button class="ts-btn ts-btn-primary btn-buy">Comprar</button>
+                        <button class="btn btn-outline-danger btn-remove">Remover</button>
+                    </div>
+
+                    <button class="ts-btn ts-btn-secondary details-btn">Detalhes</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer-content">
+            <h3>Tech Store</h3>
+            <p>© 2025 - Todos os direitos reservados</p>
+            <div class="footer-links">
+              <span id="telefone" class="icon telefone-icon" title="Copiar telefone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                  <path
+                    d="M6.62 10.79a15.466 15.466 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.2 2.2z" />
+                </svg>
+              </span>
+
+              <a href="https://github.com/bbruno8/trabalho_final_frontend" target="_blank" rel="noopener noreferrer"
+                class="icon github-icon" title="GitHub">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0.297C5.371 0.297 0 5.667 0 12.297c0 5.291 3.438 9.784 8.205 11.364.6.111.82-.261.82-.579 0-.285-.011-1.041-.017-2.044-3.338.726-4.042-1.61-4.042-1.61-.546-1.388-1.333-1.758-1.333-1.758-1.09-.745.082-.73.082-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.809 1.304 3.495.997.108-.775.419-1.304.762-1.604-2.665-.306-5.467-1.332-5.467-5.93 0-1.31.467-2.381 1.235-3.222-.124-.303-.535-1.526.117-3.176 0 0 1.008-.322 3.301 1.23.958-.266 1.984-.399 3.003-.404 1.019.005 2.045.138 3.003.404 2.291-1.552 3.298-1.23 3.298-1.23.653 1.65.242 2.873.118 3.176.77.841 1.234 1.912 1.234 3.222 0 4.609-2.805 5.62-5.478 5.921.43.369.814 1.096.814 2.21 0 1.596-.015 2.882-.015 3.274 0 .32.218.694.825.577C20.565 22.078 24 17.588 24 12.297c0-6.63-5.371-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+
+            <span id="copiado-msg" class="copiado-msg">Número copiado!</span>
+          </div>
+        </footer>
+
+      </main>
+    </div>
+    <!-- MODAL DE DETALHES -->
+    <div id="detailsModal" class="details-modal hidden">
+      
+      <div class="details-content">
+        <button class="close-modal">✖</button>
+
+        <!-- Cabeçalho + imagem -->
+        <div class="details-header">
+          <img id="detailsImage" class="details-img" src="" alt="">
+          
+          <div class="details-info">
+            <h2 id="detailsName">Nome do Serviço</h2>
+
+            <div class="details-prices">
+              <span id="detailsOldPrice" class="old-price-modal"></span>
+              <span id="detailsPrice" class="current-price-modal"></span>
+            </div>
+
+            <span class="stock-badge">EM ESTOQUE</span>
+          </div>
+        </div>
+
+        <!-- Descrição -->
+        <p id="detailsDescription" class="details-description">
+          Texto detalhado do serviço aparecerá aqui.
+        </p>
+
+        <!-- AÇÕES -->
+        <div class="details-actions">
+          <!-- Botão principal -->
+          <button id="detailsAddCart" class="details-add-btn">
+            🛒 ADICIONAR AO CARRINHO
+          </button>
+
+          <!-- Botões pós-adicionar -->
+          <div id="detailsPostAdd" class="details-post-add hidden">
+            <button id="detailsBack" class="details-secondary-btn">
+              Voltar à Página Inicial
+            </button>
+            <button id="detailsRemove" class="details-remove-btn">
+              Remover do Carrinho
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
