@@ -90,10 +90,6 @@ Contribuições são sempre bem-vindas! Para contribuir:
 
 Este projeto foi desenvolvido para fins educacionais como parte de um trabalho acadêmico.
 
-## 👨‍💻 Autor
-
-Desenvolvido grupo de front-end
-
 ---
 
 ⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!
