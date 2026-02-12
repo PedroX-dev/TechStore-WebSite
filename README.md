@@ -46,7 +46,7 @@ trabalho-front-end-ORGANIZADO/
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/trabalho-front-end-ORGANIZADO.git
+git clone https://github.com/PedroX-dev/TechStore-WebSite.git
 ```
 
 2. Navegue até o diretório do projeto:
